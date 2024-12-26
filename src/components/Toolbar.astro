@@ -1,0 +1,170 @@
+---
+const links = [
+  { name: "Home", href: "#home" },
+  { name: "Resume", href: "#resume" },
+  { name: "Projects", href: "#projects" },
+  { name: "Blogs", href: "#blogs" },
+];
+---
+
+<header>
+  <nav class="navbar">
+    <div class="logo">MyPortfolio</div>
+    <ul class="nav-links">
+      {links.map((link) => (
+        <li><a href={link.href}>{link.name}</a></li>
+      ))}
+    </ul>
+    <!-- Mobile menu toggle -->
+    <button class="burger-menu" id="burger-menu">
+      ☰
+    </button>
+  </nav>
+</header>
+
+<style>
+  /* General Reset */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+   
+  }
+
+  body {
+    font-family: Arial, sans-serif;
+  }
+
+  /* Navbar Styles */
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #333;
+    position: fixed
+  }
+
+  .navbar .logo {
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .nav-links {
+    display: flex;
+    list-style: none;
+  }
+
+  .nav-links li {
+    margin-left: 2rem;
+  }
+
+  .nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+  }
+
+  .nav-links a:hover {
+    color: #f39c12; /* Highlight color on hover */
+  }
+
+  /* Burger Menu (Hidden on Desktop) */
+  .burger-menu {
+    display: none;
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  /* Responsive Design for Mobile */
+  @media screen and (max-width: 768px) {
+    .nav-links {
+      display: none; /* Hide links by default */
+      flex-direction: column;
+      position: absolute;
+      top: 60px;
+      right: 0;
+      background-color: #333;
+      width: 100%;
+      text-align: center;
+      padding-top: 1rem;
+      z-index: 10;
+      box-shadow: -2px 4px 6px rgba(0,0,0,0.3);
+    }
+
+    .nav-links.active {
+      display: flex; /* Show links when active */
+    }
+
+    .nav-links li {
+      margin-left: 0; /* Remove left margin for mobile */
+      margin-bottom: 1rem; /* Add spacing between items */
+    }
+
+    .burger-menu {
+      display: block; /* Show burger menu on mobile */
+      cursor: pointer;
+      z-index: 11; /* Ensure it stays above other elements */
+    }
+}
+</style>
+
+<!-- <nav class="toolbar">
+    <ul class="nav-links">
+      <li><a href="/">Home</a></li>
+      <li><a href="/resume">Resume</a></li>
+      <li><a href="/projects">Projects</a></li>
+      <li><a href="/blogs">Blogs</a></li>
+    </ul>
+  </nav>
+  
+  <style>
+  .toolbar {
+      /*position: fixed;*/ /* Keeps toolbar at the top of the viewport */
+      position: fixed;
+      background-color: #333; /* Dark background color */
+      color: white;
+      padding: 1rem 2rem;
+      border-radius: 12px; /* Chamfered corners */
+      box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: fit-content; /* Adjust width dynamically based on content */
+      margin: 2rem auto; /* Center horizontally and add vertical spacing */
+      transition: transform 0.3s ease, opacity 0.3s ease; /* Smooth hide/show */
+      z-index: inherit;
+     
+	  
+  }
+  
+  .nav-links {
+      list-style-type: none;
+      display: flex;
+      gap: 1.5rem; /* Space between links */
+      margin: 0;
+      padding: 0;
+  }
+  
+  .nav-links li {
+      margin: 0;
+  }
+  
+  .nav-links a {
+      text-decoration: none;
+      color: white;
+      font-size: 1rem;
+      font-weight: bold;
+      padding: 0.5rem 1rem;
+      border-radius: 8px; /* Slightly rounded links */
+      transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
+  }
+  
+  .nav-links a:hover {
+      background-color: #f39c12; /* Highlight background on hover */
+      color: black; /* Change text color on hover */
+  }
+  </style>
+   -->
