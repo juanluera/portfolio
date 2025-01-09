@@ -1,41 +1,7 @@
 ---
-import Navigation from '../components/Navigation.astro';
-import Footer from '../components/Footer.astro';
-import "../styles/global.css";
+import BaseLayout from '../layouts/BaseLayout.astro';
 const pageTitle = "Home Page";
 ---
-
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} >
-    <title>{pageTitle}</title>
-  </head>
-  <body>
-    <Navigation />
-
-    <h1>{pageTitle}</h1>
-
-    <Footer />
-  </body>
-</html>
-
-<!-- ---
-import Welcome from '../components/Welcome.astro';
-import Layout from '../layouts/Layout.astro';
-import Toolbar from '../components/Toolbar.astro';
-
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
----
-
-<Layout>
-	<Toolbar />
-	<Welcome />
-	<Welcome />
-	<Welcome />
-
-	
-</Layout> -->
+<BaseLayout pageTitle ={pageTitle}>
+  <h2>My awesome blog subtitle</h2>
+</BaseLayout>
