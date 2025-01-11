@@ -3,6 +3,8 @@ import '../styles/global.css';
 import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Headshot from '../assets/pic1.jpeg';
+import background from '../assets/background.svg';
 
 
 const pageTitle = "About Me";
@@ -13,35 +15,57 @@ const identity = {
   major: "Electrical Enginnering and Computer Science (EECS), and Physics",
   hobbies: ["photography", "birdwatching", "baseball"],
   school: "Massachusetts Institute of Technology",
+  email: "j_luera@mit.edu",
 
 };
+const skills = [
+  "React",
+  "Flutter",
+  "Node.js",
+  "Power Electronics",
+  "STM32",
+  "ESP32",
+  "Raspberry Pi",
+  "Circuit Debugging",
+  "ROS2",
+  "ARTIQ",
+  "PyTorch",
+  "Machine Learning",
+  "Embedded Systems",
+  "Fusion 360",
+  "MATLAB",
+  "Solidworks",
+  "FPGA’s",
+  "KiCad",
+  "SQL",
+  "Altium",
+  "Docker",
+  "Linux",
+  "Cocotb",
+  "UVM",
+  "HTMX",
+  "Xilinx Vivado",
+  "TorchQuantum",
+  "mongoose"
+];
 
-const skills = ["HTML", "CSS", "JavaScript", "React", "Astro", "Writing Docs"];
 
-const happy = true;
-const finished = true;
-const goal = 3;
+// const happy = true;
+// const finished = true;
+// const goal = 3;
 const skillColor = "navy";
 const fontWeight = "bold";
 const textCase = "Capitalize";
 ---
 
 <BaseLayout>
-  <style is:global define:vars={{ skillColor, fontWeight, textCase }}>
-    h1 {
-      color: purple;
-      font-size: 4rem;
-    }
-    .skill {
-        color: var(--skillColor);
-        font-weight: var(--fontWeight);
-        text-transform: var(--textCase);
-    }
-</style>
-  <h2>{identity.firstName}</h2>
-<p>
-  
+ 
+ <img src={Headshot.src}  alt="Responsive Image" />
+ <h2>About Me</h2>
+
 </p>
+My name is {identity.firstName}. I'm currently a Senior Studying {identity.major} at {identity.school} and an incoming Master's student in 
+Computer Science. 
 <ul>
   <li>My name is {identity.firstName}.</li>
   <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
@@ -54,9 +78,29 @@ const textCase = "Capitalize";
   {skills.map((skill) => <li class="skill">{skill}</li>)}
 </ul>
 
-{happy && <p>I am happy to be learning Astro!</p>}
+
+
+<!-- {happy && <p>I am happy to be learning Astro!</p>}
 
 {finished && <p>I finished this tutorial!</p>}
 
-{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>}
+{goal === 3 ? <p>My goal is to finish in 3 days.</p> : <p>My goal is not 3 days.</p>} -->
 </BaseLayout>
+
+
+
+<style is:global define:vars={{ skillColor, fontWeight, textCase }}>
+  h1 {
+    color: purple;
+    font-size: 4rem;
+  }
+  .skill {
+      color: var(--skillColor);
+      font-weight: var(--fontWeight);
+      text-transform: var(--textCase);
+  }
+  img {
+    max-width: 100%; /* Ensures the image does not exceed the container's width */
+    height: auto;    /* Maintains the aspect ratio */
+  }
+</style>

@@ -1,6 +1,6 @@
 ---
 layout: ../../layouts/MarkdownPostLayout.astro
-title: My Third Blog Post
+title: Using RFSOC's for Phase estimation
 author: Astro Learner
 description: "I had some challenges, but asking in the community really helped!"
 image:
