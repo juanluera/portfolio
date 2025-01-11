@@ -4,14 +4,11 @@ title: Using FPGA's for autonomous vehicles
 pubDate: 2025-01-11
 description: 'This is the first post of my new Astro blog.'
 author: Juan Luera
-image:
-    url: 'https://docs.astro.build/assets/rose.webp'
-    alt: 'The Astro logo on a dark background with a pink glow.'
 
 video: 
-    url: https://www.youtube.com/watch?v=0TS0FlSu1_4
+    url: 'https://www.youtube.com/embed/0TS0FlSu1_4'
     alt: Video of FPGA project
-tags: ["FPGA","Verilog"]
+tags: ["FPGA","Verilog","Autonomous Vehicles","UART","I2C"]
 ---
 
 
@@ -33,16 +30,5 @@ detected. The goal is to recognize obstacles in lanes and maneuver
 around them. Our stretch goal is to implement an algorithm for
 room mapping using obstacle avoidance and position control. Our
 aim is to demonstrate how FPGA’s timing and parallel processing
-can optimize real-time navigational task
+can optimize real-time navigational task.
 
-## What I've accomplished
-
-1. **Installing Astro**: First, I created a new Astro project and set up my online accounts.
-
-2. **Making Pages**: I then learned how to make pages by creating new `.astro` files and placing them in the `src/pages/` folder.
-
-3. **Making Blog Posts**: This is my first blog post! I now have Astro pages and Markdown posts!
-
-## What's next
-
-I will finish the Astro tutorial, and then keep adding more posts. Watch this space for more to come.

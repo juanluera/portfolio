@@ -13,7 +13,7 @@ const identity = {
   country: "United States",
   occupation: "Physicist and Software/Electrical Engineer",
   major: "Electrical Enginnering and Computer Science (EECS), and Physics",
-  hobbies: ["photography", "birdwatching", "baseball"],
+  hobbies: ["Making Music", "Working out", "Coding :/","Learning Languages","Reading"],
   school: "Massachusetts Institute of Technology",
   email: "j_luera@mit.edu",
 
@@ -48,7 +48,18 @@ const skills = [
   "TorchQuantum",
   "mongoose"
 ];
-
+const programmingLanguages = [
+  "Python",
+  "Golang",
+  "Dart",
+  "C",
+  "C++",
+  "Swift UI",
+  "Javascript",
+  "HTML/CSS",
+  "System/Verilog",
+  "Assembly"
+];
 
 // const happy = true;
 // const finished = true;
@@ -66,16 +77,18 @@ const textCase = "Capitalize";
 </p>
 My name is {identity.firstName}. I'm currently a Senior Studying {identity.major} at {identity.school} and an incoming Master's student in 
 Computer Science. 
+<p>Some of my hobbies are: </p>
 <ul>
-  <li>My name is {identity.firstName}.</li>
-  <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
-  {identity.hobbies.length >= 2 &&
-    <li>Two of my hobbies are: {identity.hobbies[0]} and {identity.hobbies[1]}</li>
-  }
+  {identity.hobbies.map((hobby) => <li class ="skill">{hobby}</li>)}
 </ul>
 <p>My skills are:</p>
 <ul>
   {skills.map((skill) => <li class="skill">{skill}</li>)}
+</ul>
+
+<p>Some of the Languages I develop in are: </p>
+<ul>
+  {programmingLanguages.map((language) => <li class="skill">{language} </li> )}
 </ul>
 
 
