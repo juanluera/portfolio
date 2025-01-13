@@ -9,6 +9,9 @@ video:
     url: 'https://www.youtube.com/embed/0TS0FlSu1_4'
     alt: Video of FPGA project
 tags: ["FPGA","Verilog","Autonomous Vehicles","UART","I2C"]
+paper: 
+    url: "/paper1.pdf"
+    type: "application/pdf"
 ---
 
 

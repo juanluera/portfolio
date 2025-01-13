@@ -81,10 +81,13 @@ html {
 }
 
 html.dark {
-  background-color: #0d0950;
+  background-color: #010004;
   color: #fff;
 }
 
 .dark .nav-links a {
+  color: #fff;
+}
+.dark .body {
   color: #fff;
 }

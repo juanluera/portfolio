@@ -64,7 +64,7 @@ const programmingLanguages = [
 // const happy = true;
 // const finished = true;
 // const goal = 3;
-const skillColor = "navy";
+const skillColor = "black";
 const fontWeight = "bold";
 const textCase = "Capitalize";
 ---
@@ -79,12 +79,17 @@ My name is {identity.firstName}. I'm currently a Senior Studying {identity.major
 Computer Science. 
 <p>Some of my hobbies are: </p>
 <ul>
-  {identity.hobbies.map((hobby) => <li class ="skill">{hobby}</li>)}
+  {identity.hobbies.map((hobby) => <li class ="hobbies">{hobby}</li>)}
 </ul>
 <p>My skills are:</p>
-<ul>
+<!-- <ul>
   {skills.map((skill) => <li class="skill">{skill}</li>)}
-</ul>
+</ul> -->
+<div class="skills">
+  {skills.map((skill: string) => (
+    <p class="skill">{skill}</p>
+  ))}
+</div>
 
 <p>Some of the Languages I develop in are: </p>
 <ul>
@@ -107,11 +112,29 @@ Computer Science.
     color: purple;
     font-size: 4rem;
   }
-  .skill {
-      color: var(--skillColor);
+  .hobbies {
+      
       font-weight: var(--fontWeight);
       text-transform: var(--textCase);
   }
+
+  .skills {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .skill {
+    color: var(--skillColor);
+    margin: 0.25em;
+    border: dotted 1px #a1a1a1;
+    border-radius: .5em;
+    padding: .5em 1em;
+    font-size: 1.15em;
+    background-color: #F8FCFD;
+    
+  }
+
+  
   img {
     max-width: 100%; /* Ensures the image does not exceed the container's width */
     height: auto;    /* Maintains the aspect ratio */
